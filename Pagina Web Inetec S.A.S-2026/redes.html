@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inetec S.A.S. | Oficial</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-izquierdo">
+        <div class="logo-texto-wrapper">
+            <img src="img/adobe express - file (5).png" alt="Logo" class="logo-nav-pequeno">
+            <span class="nombre-empresa">Inetec S.A.S.</span>
+        </div>
+    </div>
+        <div class="nav-derecho">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                
+                <li class="dropdown">
+                    <span class="dropbtn">Servicios ▼</span>
+                    <div class="dropdown-content">
+                       <a href="mantenimiento.html">Mantenimiento</a>
+                        <a href="redes.html">Redes e Infraestructura</a>
+                        <a href="sistemas_operativos.html">Sistemas Operativos</a>
+                        <a href="sites.html">Sites</a>
+                        <a href="desarrollo_web.html">Desarrollo Web</a>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <span class="dropbtn">Redes Sociales ▼</span>
+                    <div class="dropdown-content">
+                        <a href="https://www.tiktok.com/@inetec.s.a.s">TikTok</a>
+                        <a href="https://www.instagram.com/inetec.s.a.s/">Instagram</a>
+                        <a href="https://www.youtube.com/@inetecs.a.s">YouTube</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="inicio">
+        <section class="hero">
+            <img src="img/adobe express - file (5).png" alt="Logo Inetec" class="logo-hero">
+            <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+             <div class="contenedor-resumen">
+             <p class="resumen-texto">Diseñamos arquitecturas de red sólidas y escalables que forman la columna vertebral de su comunicación digital. Implementamos soluciones de cableado estructurado bajo normas internacionales y configuramos protocolos TCP/IP para asegurar un tráfico de datos fluido y seguro. Desde la segmentación de redes LAN hasta la optimización de coberturas Wi-Fi, eliminamos cuellos de botella para mantener a su empresa siempre conectada.</p>
+            <h1 class="titulo-seccion">Nuestros Servicios</h1>
+</div>
+            <div class="contenedor-piramide">
+                <div class="fila-inferior">
+                    <div class="tarjeta">
+                        <h3>Cableado Estructurado</h3>
+                        <p>Instalación y ponchado de puntos de red Cat 6 bajo normas TIA/EIA, organización de racks y etiquetado de nodos.</p>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Configuración de Routers y WiFi</h3>
+                        <p>Configuración de subredes, seguridad WPA3, control de ancho de banda y expansión de señal WiFi para empresas y hogares.</p>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Auditoría de Conectividad</h3>
+                        <p>Pruebas de velocidad, verificación de protocolos de red y solución de conflictos de direcciones IP duplicadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="theme-toggle" class="btn-tema">
+        <span id="theme-icon">☀️</span>
+    </button>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        const icon = document.getElementById('theme-icon');
+
+        btn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            
+            // Lógica de iconos: 
+            // En tema OSCURO muestra el SOL (para volverlo claro)
+            // En tema CLARO muestra la LUNA (para volverlo oscuro)
+            icon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+
+<canvas id="canvas-estela"></canvas>
+
+    <nav></nav>
+    <main></main>
+
+    <script src="estela.js"></script>
+
+
+</body>
+</html>
