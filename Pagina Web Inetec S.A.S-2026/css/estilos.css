@@ -725,6 +725,7 @@ nav {
 }
 
 .btn-miembros {
+  position: relative;
   width: 100%;
   background-color: var(--bg-tarjeta);
   color: var(--texto-principal);
@@ -736,6 +737,24 @@ nav {
   cursor: pointer;
   text-align: left;
   transition: all 0.3s ease;
+}
+
+.btn-miembros::after,
+.btn-grupo::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: transform 0.35s ease;
+}
+
+.btn-miembros[aria-expanded="true"]::after,
+.btn-grupo[aria-expanded="true"]::after {
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .btn-miembros:hover,
@@ -750,12 +769,26 @@ nav {
   border: 1px solid var(--borde);
   border-radius: 12px;
   margin-top: 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
   padding: 14px 18px;
   color: var(--texto-secundario);
+  transform: translateY(-24px) scaleY(0.92);
+  transform-origin: top center;
+  transition:
+    max-height 0.85s ease,
+    opacity 0.6s ease,
+    transform 0.85s ease;
 }
 
 .contenido-miembros[hidden] {
   display: none;
+}
+
+.contenido-miembros.esta-abierto {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
 }
 
 .grupo-miembros + .grupo-miembros {
@@ -763,6 +796,7 @@ nav {
 }
 
 .btn-grupo {
+  position: relative;
   width: 100%;
   background: transparent;
   border: 0;
@@ -772,6 +806,7 @@ nav {
   font-size: 1rem;
   font-weight: 700;
   padding: 8px 0;
+  padding-right: 32px;
   text-align: left;
 }
 
@@ -786,7 +821,21 @@ nav {
 }
 
 .lista-nombres {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
   padding-left: 12px;
+  transform: translateY(-16px) scaleY(0.9);
+  transform-origin: top center;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.5s ease,
+    transform 0.7s ease;
+}
+
+.lista-nombres.esta-abierto {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
 }
 
 .lista-nombres p {
@@ -805,6 +854,15 @@ nav {
   margin: 0;
   padding: 8px 0;
   border-bottom: 1px solid var(--borde);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contenido-miembros,
+  .lista-nombres,
+  .btn-miembros::after,
+  .btn-grupo::after {
+    transition: none;
+  }
 }
 
 /* --- ADAPTACIÓN PARA MÓVILES (Celulares y Tablets) --- */
