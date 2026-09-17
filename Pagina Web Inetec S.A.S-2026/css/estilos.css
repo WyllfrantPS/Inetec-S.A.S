@@ -746,7 +746,6 @@ nav {
 }
 
 .contenido-miembros {
-  display: none;
   background-color: var(--bg-tarjeta);
   border: 1px solid var(--borde);
   border-radius: 12px;
@@ -755,19 +754,57 @@ nav {
   color: var(--texto-secundario);
 }
 
-.miembros-dropdown:hover .contenido-miembros,
-.miembros-dropdown:focus-within .contenido-miembros {
-  display: block;
+.contenido-miembros[hidden] {
+  display: none;
 }
 
-.contenido-miembros p {
+.grupo-miembros + .grupo-miembros {
+  margin-top: 8px;
+}
+
+.btn-grupo {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto-principal);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 0;
+  text-align: left;
+}
+
+.btn-grupo:hover,
+.btn-grupo:focus-visible {
+  color: var(--acento);
+  outline: none;
+}
+
+.lista-nombres[hidden] {
+  display: none;
+}
+
+.lista-nombres {
+  padding-left: 12px;
+}
+
+.lista-nombres p {
   margin: 0;
   padding: 8px 0;
   border-bottom: 1px solid var(--borde);
 }
 
-.contenido-miembros p:last-child {
+.lista-nombres p:last-child {
   border-bottom: none;
+}
+
+.contenido-miembros h2 {
+  color: var(--texto-principal);
+  font-size: 1rem;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--borde);
 }
 
 /* --- ADAPTACIÓN PARA MÓVILES (Celulares y Tablets) --- */

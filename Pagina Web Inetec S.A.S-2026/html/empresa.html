@@ -90,15 +90,77 @@
             </p>
 
             <div class="miembros-dropdown">
-              <button type="button" class="btn-miembros" aria-expanded="false">
+              <button
+                type="button"
+                class="btn-miembros"
+                aria-expanded="false"
+                aria-controls="contenido-miembros"
+              >
                 Miembros de la empresa
               </button>
-              <div class="contenido-miembros">
-                <p>Marketing</p>
-                <p>Mantenimiento</p>
-                <p>Redes</p>
-                <p>Sites</p>
-                <p>Programación</p>
+              <div id="contenido-miembros" class="contenido-miembros" hidden>
+                <div class="grupo-miembros">
+                  <button
+                    type="button"
+                    class="btn-grupo"
+                    aria-expanded="false"
+                    aria-controls="nombres-marketing"
+                  >
+                    Marketing
+                  </button>
+                  <div id="nombres-marketing" class="lista-nombres" hidden></div>
+                </div>
+                <div class="grupo-miembros">
+                  <button
+                    type="button"
+                    class="btn-grupo"
+                    aria-expanded="false"
+                    aria-controls="nombres-mantenimiento"
+                  >
+                    Mantenimiento
+                  </button>
+                  <div id="nombres-mantenimiento" class="lista-nombres" hidden></div>
+                </div>
+                <div class="grupo-miembros">
+                  <button
+                    type="button"
+                    class="btn-grupo"
+                    aria-expanded="false"
+                    aria-controls="nombres-redes"
+                  >
+                    Redes
+                  </button>
+                  <div id="nombres-redes" class="lista-nombres" hidden></div>
+                </div>
+                <div class="grupo-miembros">
+                  <button
+                    type="button"
+                    class="btn-grupo"
+                    aria-expanded="false"
+                    aria-controls="nombres-desarrollo-web"
+                  >
+                    Desarrollo Web
+                  </button>
+                  <div id="nombres-desarrollo-web" class="lista-nombres" hidden>
+                    <p>Wyllfrant David Perez Salazar</p>
+                    <p>Cristian Camilo Ramirez Cono</p>
+                    <p>Juan Camilo Giraldo Cifuentes</p>
+                    <p>Keiner David Lopez</p>
+                    <p>Nicolas Sanchez Botero</p>
+                    <p>Juseth David Galvez Ferrin</p>
+                  </div>
+                </div>
+                <div class="grupo-miembros">
+                  <button
+                    type="button"
+                    class="btn-grupo"
+                    aria-expanded="false"
+                    aria-controls="nombres-programacion"
+                  >
+                    Programación
+                  </button>
+                  <div id="nombres-programacion" class="lista-nombres" hidden></div>
+                </div>
               </div>
             </div>
           </div>
@@ -110,5 +172,6 @@
       <span id="theme-icon">☀️</span>
     </button>
     <script src="../js/tema.js"></script>
+    <script src="../js/miembros.js"></script>
   </body>
 </html>
