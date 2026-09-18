@@ -26,13 +26,16 @@
           <span class="nombre-empresa">Inetec S.A.S.</span>
         </div>
       </div>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      </button>
       <div class="nav-derecho">
-        <ul class="menu">
+        <ul class="menu" id="menu-principal">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="empresa.html">Empresa</a></li>
 
           <li class="dropdown">
-            <span class="dropbtn">Servicios ▼</span>
+            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
             <div class="dropdown-content">
               <a href="mantenimiento.html">Mantenimiento</a>
               <a href="redes.html">Redes e Infraestructura</a>
@@ -43,7 +46,7 @@
           </li>
 
           <li class="dropdown">
-            <span class="dropbtn">Redes Sociales ▼</span>
+            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
             <div class="dropdown-content">
               <a
                 href="https://www.tiktok.com/@inetec.s.a.s"
@@ -126,5 +129,6 @@
     </button>
 
     <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
   </body>
 </html>

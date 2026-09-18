@@ -67,6 +67,10 @@ h1 {
   width: 44px;
 }
 
+.personaje {
+  animation: none;
+}
+
 .cabeza {
   background: var(--blanco);
   border-radius: 48% 48% 43% 43%;
@@ -132,12 +136,12 @@ h1 {
 
 .pierna-izquierda {
   left: 13px;
-  animation: caminar-izquierda 0.45s infinite alternate ease-in-out;
+  animation: caminar-izquierda 0.9s infinite alternate ease-in-out;
 }
 
 .pierna-derecha {
   left: 25px;
-  animation: caminar-derecha 0.45s infinite alternate ease-in-out;
+  animation: caminar-derecha 0.9s infinite alternate ease-in-out;
 }
 
 @keyframes caminar-izquierda {
@@ -181,10 +185,6 @@ h1 {
   .personaje,
   .relleno {
     transition: none;
-  }
-
-  .pierna-izquierda,
-  .pierna-derecha {
     animation: none;
   }
 }

@@ -26,13 +26,24 @@
           <span class="nombre-empresa">Inetec S.A.S.</span>
         </div>
       </div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+      >
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span>
+        <span>Menú</span>
+      </button>
       <div class="nav-derecho">
-        <ul class="menu">
+        <ul class="menu" id="menu-principal">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="empresa.html">Empresa</a></li>
 
           <li class="dropdown">
-            <span class="dropbtn">Servicios ▼</span>
+            <button class="dropbtn" type="button" aria-expanded="false">
+              Servicios <span aria-hidden="true">▼</span>
+            </button>
             <div class="dropdown-content">
               <a href="mantenimiento.html">Mantenimiento</a>
               <a href="redes.html">Redes e Infraestructura</a>
@@ -43,7 +54,9 @@
           </li>
 
           <li class="dropdown">
-            <span class="dropbtn">Redes Sociales ▼</span>
+            <button class="dropbtn" type="button" aria-expanded="false">
+              Redes Sociales <span aria-hidden="true">▼</span>
+            </button>
             <div class="dropdown-content">
               <a
                 href="https://www.tiktok.com/@inetec.s.a.s"
@@ -76,6 +89,8 @@
           alt="Logo Inetec"
           class="logo-hero"
         />
+        <p class="etiqueta-hero">Tecnología que impulsa tus ideas</p>
+        <h1 class="titulo-hero">Soluciones tecnológicas para avanzar con confianza</h1>
         <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
 
         <div class="contenedor-resumen">
@@ -96,7 +111,7 @@
           >
         </div>
 
-        <h1 class="titulo-seccion" id="servicios">Nuestros Servicios</h1>
+        <h2 class="titulo-seccion" id="servicios">Nuestros Servicios</h2>
 
         <div class="contenedor-piramide">
           <div class="fila-superior">
@@ -137,13 +152,27 @@
       </section>
 
       <section class="seccion-beneficios">
-        <div class="bloque-beneficio">
+        <div class="encabezado-seccion">
+          <p class="etiqueta-seccion">Una forma clara de trabajar</p>
           <h2>¿Por qué elegir Inetec?</h2>
-          <ul>
-            <li>Soporte técnico con enfoque práctico y profesional.</li>
-            <li>Soluciones adaptadas a tu negocio o entorno personal.</li>
-            <li>Atención cercana, eficiente y orientada a resultados.</li>
-          </ul>
+          <p>Te acompañamos desde el diagnóstico hasta la puesta en marcha de cada solución.</p>
+        </div>
+        <div class="beneficios-grid">
+          <article class="beneficio">
+            <span class="numero-beneficio">01</span>
+            <h3>Enfoque práctico</h3>
+            <p>Analizamos cada necesidad y proponemos soluciones que puedan aplicarse de verdad.</p>
+          </article>
+          <article class="beneficio">
+            <span class="numero-beneficio">02</span>
+            <h3>Atención cercana</h3>
+            <p>Explicamos el proceso con claridad para que puedas tomar mejores decisiones.</p>
+          </article>
+          <article class="beneficio">
+            <span class="numero-beneficio">03</span>
+            <h3>Visión integral</h3>
+            <p>Conectamos mantenimiento, infraestructura y desarrollo para cuidar todo tu entorno digital.</p>
+          </article>
         </div>
       </section>
     </main>
@@ -170,5 +199,6 @@
     </button>
 
     <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
   </body>
 </html>

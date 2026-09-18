@@ -16,4 +16,4 @@ const intervalo = window.setInterval(() => {
       window.location.href = "../html/index.html";
     }, 650);
   }
-}, 170);
+}, 350);
