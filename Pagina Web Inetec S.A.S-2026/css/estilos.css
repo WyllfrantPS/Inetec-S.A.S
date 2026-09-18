@@ -655,6 +655,68 @@ nav {
   background: transparent;
 }
 
+.empresa-informacion {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: min(100%, 900px);
+  margin-top: 42px;
+  text-align: left;
+}
+
+.empresa-bloque {
+  padding: 26px;
+  border: 1px solid var(--borde);
+  border-top: 3px solid var(--acento);
+  background: var(--bg-tarjeta);
+}
+
+.empresa-bloque-ancho {
+  grid-column: 1 / -1;
+}
+
+.empresa-bloque h2 {
+  margin: 0 0 12px;
+  color: var(--texto-principal);
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.empresa-bloque > p:last-child {
+  margin: 0;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+}
+
+.empresa-bloque .etiqueta-seccion {
+  margin-bottom: 16px;
+}
+
+.pasos-empresa {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pasos-empresa div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--borde);
+}
+
+.pasos-empresa strong {
+  color: var(--acento);
+  font-size: 0.85rem;
+}
+
+.pasos-empresa span {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .miembros-dropdown {
   width: min(100%, 600px);
   margin-top: 24px;
@@ -925,6 +987,57 @@ body {
   line-height: 1.65;
 }
 
+.detalle-servicio {
+  width: min(100%, 980px);
+  margin: 72px auto 0;
+  padding: 42px 30px;
+  border-top: 1px solid var(--borde);
+  text-align: left;
+}
+
+.detalle-introduccion {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.detalle-introduccion h2 {
+  margin: 0 0 12px;
+  color: var(--texto-principal);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.detalle-introduccion > p:last-child {
+  margin: 0;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detalle-grid article {
+  padding: 22px;
+  border: 1px solid var(--borde);
+  background: var(--bg-tarjeta);
+}
+
+.detalle-grid h3 {
+  margin: 0 0 10px;
+  color: var(--acento);
+  font-size: 1.05rem;
+}
+
+.detalle-grid p {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: row;
@@ -1044,6 +1157,27 @@ body {
   }
 
   .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-servicio {
+    margin-top: 48px;
+    padding: 32px 15px;
+  }
+
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-informacion {
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-bloque-ancho {
+    grid-column: auto;
+  }
+
+  .pasos-empresa {
     grid-template-columns: 1fr;
   }
 
