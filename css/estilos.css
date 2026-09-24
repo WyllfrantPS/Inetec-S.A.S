@@ -1,0 +1,1202 @@
+/* --- CONFIGURACIÓN DE COLORES (VARIABLES) --- */
+:root[data-theme="dark"] {
+  --bg-body: #000000;
+  --bg-nav: #050505;
+  --texto-principal: #ffffff;
+  --texto-secundario: #bbbbbb;
+  --bg-tarjeta: #0a0a0a;
+  --borde: #222222;
+  --acento: #007bff;
+  --texto-nav: #ffffff;
+}
+
+:root[data-theme="light"] {
+  --bg-body: #ffffff;
+  --bg-nav: #f8f9fa;
+  --texto-principal: #1a1a1a;
+  --texto-secundario: #555555;
+  --bg-tarjeta: #f1f3f5;
+  --borde: #dddddd;
+  --acento: #0056b3;
+  --texto-nav: #1a1a1a;
+}
+
+:root[data-theme="azul-nocturno"] {
+  --bg-body: #050b14;
+  --bg-nav: #091827;
+  --texto-principal: #f4f9fc;
+  --texto-secundario: #bfd2df;
+  --bg-tarjeta: #0d2234;
+  --borde: #24445b;
+  --acento: #68d8d0;
+  --texto-nav: #f4f9fc;
+}
+
+:root[data-theme="azul-hielo"] {
+  --bg-body: #cbdde4;
+  --bg-nav: #164e63;
+  --texto-principal: #172f3b;
+  --texto-secundario: #385663;
+  --bg-tarjeta: #e5f0f3;
+  --borde: #8eafb9;
+  --acento: #0f6078;
+  --texto-nav: #f2f7f8;
+}
+
+/* --- ESTILOS GENERALES --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--texto-principal);
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: var(--bg-nav);
+  border-bottom: 2px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nombre-empresa {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+}
+
+.menu a,
+.dropbtn {
+  text-decoration: none;
+  color: var(--texto-nav);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.menu a:focus-visible,
+.tarjeta-link:focus-visible,
+.btn-tema:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 4px;
+}
+
+/* DESPLEGABLES */
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-tarjeta);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--borde);
+  top: 100%;
+  right: 0;
+}
+
+.dropdown-content a {
+  padding: 12px 20px;
+  display: block;
+  font-weight: 400;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: var(--acento);
+  color: white;
+}
+
+/* --- SECCIÓN HERO Y PIRÁMIDE --- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.logo-hero {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.slogan-empresa {
+  font-size: 1.1rem;
+  color: var(--texto-secundario);
+  margin-bottom: 40px;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.contenedor-piramide {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.fila-superior,
+.fila-inferior {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* --- TARJETAS --- */
+.tarjeta {
+  background-color: var(--bg-tarjeta);
+  width: 200px;
+  height: 220px;
+  padding: 35px 20px;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tarjeta h3 {
+  color: var(--acento);
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+.tarjeta p {
+  font-size: 0.85rem;
+  color: var(--texto-secundario);
+  margin: 0;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* Efecto Hover Tarjetas */
+.tarjeta:hover {
+  transform: translateY(-15px) scale(1.05);
+  border-color: var(--acento);
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.15);
+}
+
+/* --- BOTÓN DE TEMA REDONDO --- */
+/* --- BOTÓN DE TEMA REDONDO (Pequeño y B&N) --- */
+.btn-tema {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 45px; /* Tamaño reducido */
+  height: 45px; /* Tamaño reducido */
+  border-radius: 50%;
+  border: 2px solid var(--acento);
+  background-color: var(--acento);
+  color: #ffffff;
+  font-size: 1.2rem; /* Icono un poco más pequeño */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+/* Efecto al pasar el mouse */
+.btn-tema:hover {
+  transform: scale(1.1);
+  background-color: var(--texto-principal);
+  color: var(--acento);
+  border-color: var(--acento);
+}
+
+/* Ajuste para que el icono se vea bien en tema oscuro */
+:root[data-theme="dark"] .btn-tema {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+:root[data-theme="dark"] .btn-tema:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+
+:root[data-theme="light"] .btn-tema {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+}
+
+:root[data-theme="light"] .btn-tema:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+/* Contenedor para alinear logo y nombre */
+.logo-texto-wrapper {
+  display: flex;
+  align-items: center; /* Centra verticalmente el logo con el texto */
+  gap: 8px; /* Espacio pequeño entre el logo y el nombre */
+}
+
+/* Logo pequeño del tamaño de la fuente */
+.logo-nav-pequeno {
+  height: 70px; /* El tamaño 'rem' asegura que coincida con la altura de la fuente */
+  width: auto; /* Mantiene la proporción */
+  object-fit: contain;
+}
+
+/* --- MEJORAS DE UX Y CONVERSIÓN --- */
+.tarjeta-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.acciones-principales {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.btn-principal,
+.btn-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-principal {
+  background: var(--acento);
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+.btn-principal:hover,
+.btn-secundario:hover {
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background: transparent;
+  border: 2px solid var(--acento);
+  color: var(--texto-principal);
+}
+
+.seccion-beneficios {
+  padding: 40px 20px 80px;
+}
+
+.bloque-beneficio {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 18px;
+  padding: 28px 32px;
+}
+
+.bloque-beneficio h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.bloque-beneficio ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--texto-secundario);
+  line-height: 1.8;
+}
+
+.footer-principal {
+  background: var(--bg-nav);
+  border-top: 2px solid var(--borde);
+  padding: 30px 5%;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-content h3,
+.footer-content h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.footer-content p,
+.footer-content li,
+.footer-content a {
+  color: var(--texto-secundario);
+  text-decoration: none;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+/* Ajuste opcional para el nombre para asegurar alineación */
+.nombre-empresa {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1; /* Ayuda a que el logo se centre mejor visualmente */
+}
+
+/* --- EFECTO DE BRILLO PARA EL NOMBRE Y SUBTÍTULOS --- */
+
+.nombre-empresa {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--texto-nav);
+  /* Borde brillante azul */
+  text-shadow:
+    0 0 8px rgba(0, 123, 255, 0.8),
+    0 0 15px rgba(0, 123, 255, 0.4);
+  transition: text-shadow 0.3s ease;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--texto-principal);
+  /* Borde brillante para los subtítulos */
+  text-shadow:
+    0 0 10px rgba(0, 123, 255, 0.6),
+    0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+/* Efecto extra: cuando pasas el mouse por el nombre, brilla más */
+.logo-texto-wrapper:hover .nombre-empresa {
+  text-shadow:
+    0 0 12px rgba(0, 123, 255, 1),
+    0 0 25px rgba(0, 123, 255, 0.7);
+}
+
+/* Ajuste para los títulos dentro de las tarjetas */
+.tarjeta h3 {
+  color: var(--acento);
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* --- BRILLO PARA SUBPÁGINAS Y MENÚS DESPLEGABLES --- */
+
+/* Estilo de los enlaces dentro del menú desplegable */
+.dropdown-content a {
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  color: var(--texto-principal);
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  /* Brillo inicial suave */
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Efecto al pasar el cursor sobre una subpágina */
+.dropdown-content a:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Fondo azul muy tenue */
+  color: var(--acento);
+  /* Brillo intenso al hacer hover */
+  text-shadow:
+    0 0 8px rgba(0, 123, 255, 0.8),
+    0 0 15px rgba(0, 123, 255, 0.4);
+  padding-left: 25px; /* Pequeño movimiento a la derecha */
+}
+
+/* Borde brillante para la "carpeta" o caja del menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--bg-tarjeta);
+  min-width: 210px;
+  top: 100%;
+  right: 0;
+  border: 1px solid var(--acento); /* Borde del color de acento */
+  border-radius: 8px;
+  overflow: hidden;
+  /* Resplandor exterior de la caja del menú */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+  z-index: 1000;
+}
+
+/* Brillo para los botones principales del menú (Inicio, Empresa, etc.) */
+.menu a,
+.dropbtn {
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  transition: text-shadow 0.3s ease;
+}
+
+.menu a:hover,
+.dropdown:hover .dropbtn {
+  color: var(--acento);
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+}
+/* --- EFECTOS PARA EL LOGO Y LA FRASE (HERO) --- */
+
+/* Estilo inicial del logo principal */
+.logo-hero {
+  width: 140px;
+  margin-bottom: 10px;
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease;
+  /* Filtro para que el logo brille en lugar de un borde cuadrado */
+  filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0));
+}
+
+/* Brillo del LOGO al pasar el mouse */
+.logo-hero:hover {
+  transform: scale(1.05); /* Se agranda un poco */
+  filter: drop-shadow(0 0 15px rgba(0, 123, 255, 0.8))
+    drop-shadow(0 0 30px rgba(0, 123, 255, 0.4));
+}
+
+/* Estilo inicial de la frase/slogan */
+.slogan-empresa {
+  font-size: 1.1rem;
+  color: var(--texto-secundario);
+  margin-bottom: 40px;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+/* Brillo de la FRASE al pasar el mouse */
+.slogan-empresa:hover {
+  color: rgba(0, 123, 255, 0.8);
+  text-shadow:
+    0 0 10px rgba(0, 123, 255, 0.8),
+    0 0 20px rgba(0, 123, 255, 0.4);
+  transform: translateY(-2px); /* Pequeño levante */
+}
+
+/* Elimina el estilo de enlace azul y permite que la tarjeta se vea igual */
+.tarjeta-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 220px;
+}
+
+/* Efecto visual opcional para que el usuario sepa que puede hacer click */
+.tarjeta:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+.contenedor-resumen {
+  max-width: 600px; /* Esto evita que el texto se estire mucho */
+  margin: 20px auto; /* Lo centra horizontalmente */
+  padding: 0 20px; /* Espacio interno para que no toque los bordes en celulares */
+}
+
+.resumen-texto {
+  font-size: 1.1rem;
+  line-height: 1.6; /* Da aire entre líneas para que sea fácil de leer */
+  color: var(--texto-principal);
+  text-align: center;
+  opacity: 0.9; /* Le da un toque más elegante, no tan brillante */
+}
+
+/* Opcional: Resaltar las palabras clave con el azul de Inetec */
+.resumen-texto strong {
+  color: var(--acento);
+  font-weight: 600;
+}
+/* Variables para que el color cambie según el tema */
+[data-theme="dark"] {
+  --fondo-quienes: #000000;
+  --texto-quienes: #e0e0e0;
+  --resaltado: #ffffff;
+}
+
+[data-theme="azul-nocturno"] {
+  --fondo-quienes: #050b14;
+  --texto-quienes: #cfe1eb;
+  --resaltado: #8ae9df;
+}
+
+[data-theme="light"] {
+  --fondo-quienes: #ffffff;
+  --texto-quienes: #333333;
+  --resaltado: #007bff;
+}
+
+[data-theme="azul-hielo"] {
+  --fondo-quienes: #cbdde4;
+  --texto-quienes: #294a58;
+  --resaltado: #0f6078;
+}
+
+.seccion-quienes {
+  padding: 80px 20px;
+  background-color: var(--fondo-quienes); /* Cambia automáticamente */
+  transition: background-color 0.3s ease;
+}
+
+.limite-lectura {
+  max-width: 600px; /* Evita que el texto se riegue a los lados */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titulo-quienes {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  color: var(--acento);
+  margin-bottom: 40px;
+}
+
+.contenido-somos {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Espacio entre párrafos */
+}
+
+.parrafo-somos {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--texto-quienes); /* Cambia según el tema */
+  text-align: justify;
+  margin: 0;
+}
+
+.parrafo-somos strong {
+  color: var(--resaltado);
+  font-weight: 600;
+}
+
+#canvas-estela {
+  position: fixed; /* Se queda fijo mientras haces scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Pone los cuadritos DETRÁS del texto y botones */
+  pointer-events: none; /* PERMITE hacer clic en los enlaces a través del canvas */
+  background: transparent;
+}
+/* --- Sección Empresa Limpia (Sin cuadros) --- */
+.seccion-quienes-somos {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: transparent; /* Importante: Transparente para ver la estela */
+}
+
+.contenedor-empresa {
+  max-width: 600px; /* Evita que el texto se riegue */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para los párrafos de Quiénes Somos */
+.texto-quienes-somos {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--texto-quienes, #ffffff); /* Usará blanco o gris según el tema */
+  text-align: justify;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.empresa-informacion {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: min(100%, 900px);
+  margin-top: 42px;
+  text-align: left;
+}
+
+.empresa-bloque {
+  padding: 26px;
+  border: 1px solid var(--borde);
+  border-top: 3px solid var(--acento);
+  background: var(--bg-tarjeta);
+}
+
+.empresa-bloque-ancho {
+  grid-column: 1 / -1;
+}
+
+.empresa-bloque h2 {
+  margin: 0 0 12px;
+  color: var(--texto-principal);
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.empresa-bloque > p:last-child {
+  margin: 0;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+}
+
+.empresa-bloque .etiqueta-seccion {
+  margin-bottom: 16px;
+}
+
+.pasos-empresa {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pasos-empresa div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--borde);
+}
+
+.pasos-empresa strong {
+  color: var(--acento);
+  font-size: 0.85rem;
+}
+
+.pasos-empresa span {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.miembros-dropdown {
+  width: min(100%, 600px);
+  margin-top: 24px;
+}
+
+.btn-miembros {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-tarjeta);
+  color: var(--texto-principal);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.btn-miembros::after,
+.btn-grupo::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  transform: translateY(-50%);
+  transition: transform 0.35s ease;
+}
+
+.btn-miembros[aria-expanded="true"]::after,
+.btn-grupo[aria-expanded="true"]::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.btn-miembros:hover,
+.btn-miembros:focus-visible {
+  border-color: var(--acento);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+  outline: none;
+}
+
+.contenido-miembros {
+  background-color: var(--bg-tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  margin-top: 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 14px 18px;
+  color: var(--texto-secundario);
+  transform: translateY(-24px) scaleY(0.92);
+  transform-origin: top center;
+  transition:
+    max-height 0.85s ease,
+    opacity 0.6s ease,
+    transform 0.85s ease;
+}
+
+.contenido-miembros[hidden] {
+  display: none;
+}
+
+.contenido-miembros.esta-abierto {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
+}
+
+.grupo-miembros + .grupo-miembros {
+  margin-top: 8px;
+}
+
+.btn-grupo {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--borde);
+  color: var(--texto-principal);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 0;
+  padding-right: 32px;
+  text-align: left;
+}
+
+.btn-grupo:hover,
+.btn-grupo:focus-visible {
+  color: var(--acento);
+  outline: none;
+}
+
+.lista-nombres[hidden] {
+  display: none;
+}
+
+.lista-nombres {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-left: 12px;
+  transform: translateY(-16px) scaleY(0.9);
+  transform-origin: top center;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.5s ease,
+    transform 0.7s ease;
+}
+
+.lista-nombres.esta-abierto {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
+}
+
+.lista-nombres p {
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.lista-nombres p:last-child {
+  border-bottom: none;
+}
+
+.contenido-miembros h2 {
+  color: var(--texto-principal);
+  font-size: 1rem;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contenido-miembros,
+  .lista-nombres,
+  .btn-miembros::after,
+  .btn-grupo::after {
+    transition: none;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* --- NAVEGACION RESPONSIVE Y PORTADA --- */
+.nav-derecho {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: transparent;
+  color: var(--texto-nav);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  border-color: var(--acento);
+  color: var(--acento);
+  outline: none;
+}
+
+.dropbtn {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.dropdown.esta-abierto .dropdown-content {
+  display: block;
+}
+
+.etiqueta-hero,
+.etiqueta-seccion {
+  margin: 0 0 14px;
+  color: var(--acento);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.titulo-hero {
+  max-width: 820px;
+  margin: 0;
+  color: var(--texto-principal);
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero .slogan-empresa {
+  margin: 24px 0 8px;
+}
+
+.seccion-beneficios {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.encabezado-seccion {
+  max-width: 680px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.encabezado-seccion h2 {
+  margin: 0 0 12px;
+  color: var(--texto-principal);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.encabezado-seccion > p:last-child {
+  margin: 0;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.beneficio {
+  min-height: 210px;
+  padding: 26px;
+  border: 1px solid var(--borde);
+  border-top: 3px solid var(--acento);
+  background: var(--bg-tarjeta);
+}
+
+.numero-beneficio {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--acento);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.beneficio h3 {
+  margin: 0 0 10px;
+  color: var(--texto-principal);
+}
+
+.beneficio p {
+  margin: 0;
+  color: var(--texto-secundario);
+  line-height: 1.65;
+}
+
+.detalle-servicio {
+  width: min(100%, 980px);
+  margin: 72px auto 0;
+  padding: 42px 30px;
+  border-top: 1px solid var(--borde);
+  text-align: left;
+}
+
+.detalle-introduccion {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.detalle-introduccion h2 {
+  margin: 0 0 12px;
+  color: var(--texto-principal);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.detalle-introduccion > p:last-child {
+  margin: 0;
+  color: var(--texto-secundario);
+  line-height: 1.7;
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detalle-grid article {
+  padding: 22px;
+  border: 1px solid var(--borde);
+  background: var(--bg-tarjeta);
+}
+
+.detalle-grid h3 {
+  margin: 0 0 10px;
+  color: var(--acento);
+  font-size: 1.05rem;
+}
+
+.detalle-grid p {
+  margin: 0;
+  color: var(--texto-secundario);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 5%;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-derecho {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding: 12px 5% 18px;
+    background: var(--bg-nav);
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .nav-derecho.esta-abierto {
+    display: block;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 4px;
+    padding: 0;
+  }
+
+  .contenedor-piramide,
+  .fila-superior,
+  .fila-inferior {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    height: 220px;
+    padding: 25px 15px;
+  }
+
+  .tarjeta-link {
+    width: 85%;
+    height: 220px;
+  }
+
+  .logo-nav-pequeno {
+    height: 50px;
+  }
+
+  .nombre-empresa {
+    font-size: 1.1rem;
+  }
+
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+
+  .slogan-empresa,
+  .resumen-texto {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .limite-lectura,
+  .contenedor-empresa {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .parrafo-somos,
+  .texto-quienes-somos {
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .logo-hero {
+    width: 110px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .menu a,
+  .dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 0;
+    text-align: left;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    margin: 0 0 4px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.esta-abierto .dropdown-content {
+    display: block;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-servicio {
+    margin-top: 48px;
+    padding: 32px 15px;
+  }
+
+  .detalle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-informacion {
+    grid-template-columns: 1fr;
+  }
+
+  .empresa-bloque-ancho {
+    grid-column: auto;
+  }
+
+  .pasos-empresa {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficio {
+    min-height: 0;
+  }
+
+  .titulo-hero {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

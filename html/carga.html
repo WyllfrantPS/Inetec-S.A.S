@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargando | Inetec S.A.S.</title>
+    <link rel="stylesheet" href="../css/carga.css" />
+  </head>
+  <body>
+    <main class="pantalla-carga" aria-labelledby="titulo-carga">
+      <p class="marca">Inetec S.A.S.</p>
+      <h1 id="titulo-carga">Preparando el camino</h1>
+
+      <div class="contenedor-barra">
+        <div class="personaje" aria-hidden="true">
+          <span class="cabeza"><span class="ojo"></span></span>
+          <span class="cuerpo"></span>
+          <span class="pierna pierna-izquierda"></span>
+          <span class="pierna pierna-derecha"></span>
+        </div>
+        <div
+          class="barra"
+          role="progressbar"
+          aria-label="Progreso de carga"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <div class="relleno"></div>
+        </div>
+      </div>
+
+      <p class="estado" id="estado-carga">Cargando... 0%</p>
+    </main>
+
+    <script src="../js/carga.js"></script>
+  </body>
+</html>

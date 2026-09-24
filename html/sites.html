@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sites y Blogs | Inetec S.A.S.</title>
+    <meta
+      name="description"
+      content="Creación y administración de sites, blogs corporativos y portales informativos."
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-izquierdo">
+        <div class="logo-texto-wrapper">
+          <img
+            src="../img/adobe express - file (5).png"
+            alt="Logo"
+            class="logo-nav-pequeno"
+          />
+          <span class="nombre-empresa">Inetec S.A.S.</span>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      </button>
+      <div class="nav-derecho">
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a href="mantenimiento.html">Mantenimiento</a>
+              <a href="redes.html">Redes e Infraestructura</a>
+              <a href="sistemas_operativos.html">Sistemas Operativos</a>
+              <a href="sites.html">Sites</a>
+              <a href="desarrollo_web.html">Desarrollo Web</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a
+                href="https://www.tiktok.com/@inetec.s.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TikTok</a
+              >
+              <a
+                href="https://www.instagram.com/inetec.s.a.s/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              <a
+                href="https://www.youtube.com/@inetecs.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero">
+        <img
+          src="../img/adobe express - file (5).png"
+          alt="Logo Inetec"
+          class="logo-hero"
+        />
+        <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+        <div class="contenedor-resumen">
+          <p class="resumen-texto">
+            Nuestra división de Sites se especializa en la creación y
+            administración de blogs corporativos y portales informativos de alto
+            rendimiento. En Inetec S.A.S., no solo diseñamos la interfaz, sino
+            que optimizamos la estructura de contenido para garantizar una
+            navegación fluida y un posicionamiento efectivo. Transformamos la
+            información técnica en experiencias digitales dinámicas, permitiendo
+            que su empresa comparta conocimientos, actualizaciones y tutoriales
+            con una estética moderna y profesional.
+          </p>
+        </div>
+        <h1 class="titulo-seccion">Nuestros Servicios</h1>
+        <div class="contenedor-piramide">
+          <div class="fila-superior">
+            <a href="index.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Site de Inetec S.A.S</h3>
+                <p>Site</p>
+              </div>
+            </a>
+            <a href="index.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Blog de Inetec S.A.S</h3>
+                <p>Blog</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <section class="detalle-servicio" aria-labelledby="detalle-sites">
+          <div class="detalle-introduccion">
+            <p class="etiqueta-seccion">Contenido con propósito</p>
+            <h2 id="detalle-sites">¿Qué puede tener tu Site o blog?</h2>
+            <p>Organizamos tu información para que sea fácil de encontrar, actualizar y compartir con tu audiencia.</p>
+          </div>
+          <div class="detalle-grid">
+            <article>
+              <h3>Estructura clara</h3>
+              <p>Definimos secciones, categorías y menús que ayuden a las personas a recorrer el contenido.</p>
+            </article>
+            <article>
+              <h3>Publicación sencilla</h3>
+              <p>Preparamos una base organizada para incorporar noticias, artículos, tutoriales o información institucional.</p>
+            </article>
+            <article>
+              <h3>Experiencia adaptable</h3>
+              <p>Diseñamos la presentación para que el contenido se consulte correctamente desde distintos dispositivos.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <button id="theme-toggle" class="btn-tema" type="button">
+      <span id="theme-icon">☀️</span>
+    </button>
+    <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redes e Infraestructura | Inetec S.A.S.</title>
+    <meta
+      name="description"
+      content="Diseño, instalación, configuración y auditoría de redes e infraestructura tecnológica."
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-izquierdo">
+        <div class="logo-texto-wrapper">
+          <img
+            src="../img/adobe express - file (5).png"
+            alt="Logo"
+            class="logo-nav-pequeno"
+          />
+          <span class="nombre-empresa">Inetec S.A.S.</span>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      </button>
+      <div class="nav-derecho">
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a href="mantenimiento.html">Mantenimiento</a>
+              <a href="redes.html">Redes e Infraestructura</a>
+              <a href="sistemas_operativos.html">Sistemas Operativos</a>
+              <a href="sites.html">Sites</a>
+              <a href="desarrollo_web.html">Desarrollo Web</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a
+                href="https://www.tiktok.com/@inetec.s.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TikTok</a
+              >
+              <a
+                href="https://www.instagram.com/inetec.s.a.s/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              <a
+                href="https://www.youtube.com/@inetecs.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero">
+        <img
+          src="../img/adobe express - file (5).png"
+          alt="Logo Inetec"
+          class="logo-hero"
+        />
+        <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+        <div class="contenedor-resumen">
+          <p class="resumen-texto">
+            Diseñamos arquitecturas de red sólidas y escalables que forman la
+            columna vertebral de su comunicación digital. Implementamos
+            soluciones de cableado estructurado bajo normas internacionales y
+            configuramos protocolos TCP/IP para asegurar un tráfico de datos
+            fluido y seguro. Desde la segmentación de redes LAN hasta la
+            optimización de coberturas Wi-Fi, eliminamos cuellos de botella para
+            mantener a su empresa siempre conectada.
+          </p>
+          <h1 class="titulo-seccion">Nuestros Servicios</h1>
+        </div>
+        <div class="contenedor-piramide">
+          <div class="fila-inferior">
+            <div class="tarjeta">
+              <h3>Cableado Estructurado</h3>
+              <p>
+                Instalación y ponchado de puntos de red Cat 6 bajo normas
+                TIA/EIA, organización de racks y etiquetado de nodos.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Configuración de Routers y WiFi</h3>
+              <p>
+                Configuración de subredes, seguridad WPA3, control de ancho de
+                banda y expansión de señal WiFi para empresas y hogares.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Auditoría de Conectividad</h3>
+              <p>
+                Pruebas de velocidad, verificación de protocolos de red y
+                solución de conflictos de direcciones IP duplicadas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="detalle-servicio" aria-labelledby="detalle-redes">
+          <div class="detalle-introduccion">
+            <p class="etiqueta-seccion">Conexiones que funcionan</p>
+            <h2 id="detalle-redes">¿Qué podemos revisar en tu red?</h2>
+            <p>Estudiamos la conexión completa para encontrar fallas, mejorar la cobertura y organizar la infraestructura.</p>
+          </div>
+          <div class="detalle-grid">
+            <article>
+              <h3>Diagnóstico</h3>
+              <p>Revisamos velocidad, cobertura, cableado, dispositivos conectados y posibles conflictos de red.</p>
+            </article>
+            <article>
+              <h3>Configuración</h3>
+              <p>Ajustamos routers, puntos de acceso, subredes y opciones de seguridad de acuerdo con el entorno.</p>
+            </article>
+            <article>
+              <h3>Organización</h3>
+              <p>Ayudamos a ordenar racks, puntos de red y equipos para facilitar el mantenimiento futuro.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <button id="theme-toggle" class="btn-tema" type="button">
+      <span id="theme-icon">☀️</span>
+    </button>
+    <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
+  </body>
+</html>

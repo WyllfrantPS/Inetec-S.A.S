@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mantenimiento | Inetec S.A.S.</title>
+    <meta
+      name="description"
+      content="Mantenimiento preventivo, correctivo y optimización térmica para equipos informáticos."
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-izquierdo">
+        <div class="logo-texto-wrapper">
+          <img
+            src="../img/adobe express - file (5).png"
+            alt="Logo"
+            class="logo-nav-pequeno"
+          />
+          <span class="nombre-empresa">Inetec S.A.S.</span>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      </button>
+      <div class="nav-derecho">
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a href="mantenimiento.html">Mantenimiento</a>
+              <a href="redes.html">Redes e Infraestructura</a>
+              <a href="sistemas_operativos.html">Sistemas Operativos</a>
+              <a href="sites.html">Sites</a>
+              <a href="desarrollo_web.html">Desarrollo Web</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a
+                href="https://www.tiktok.com/@inetec.s.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TikTok</a
+              >
+              <a
+                href="https://www.instagram.com/inetec.s.a.s/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              <a
+                href="https://www.youtube.com/@inetecs.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero">
+        <img
+          src="../img/adobe express - file (5).png"
+          alt="Logo Inetec"
+          class="logo-hero"
+        />
+        <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+        <div class="contenedor-resumen">
+          <p class="resumen-texto">
+            Nos especializamos en la gestión integral del ciclo de vida de su
+            hardware. A través de diagnósticos precisos y mantenimientos
+            preventivos rigurosos, eliminamos riesgos de sobrecalentamiento y
+            fallos críticos en componentes internos. Aplicamos técnicas
+            avanzadas de limpieza, renovación de materiales térmicos y
+            sustitución de piezas defectuosas, garantizando que su
+            infraestructura física opere siempre con la máxima eficiencia y
+            durabilidad.
+          </p>
+        </div>
+        <h1 class="titulo-seccion">Nuestros Servicios</h1>
+
+        <div class="contenedor-piramide">
+          <div class="fila-inferior">
+            <div class="tarjeta">
+              <h3>Mantenimiento Preventivo</h3>
+              <p>
+                Limpieza profunda de componentes, lubricación de ventiladores y
+                aplicación de aire comprimido para evitar fallos por polvo y
+                humedad.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Mantenimiento Correctivo</h3>
+              <p>
+                Cambio de piezas defectuosas (teclados, pantallas, baterías) y
+                reparación de componentes internos para devolverle la vida a tu
+                equipo.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Optimización Térmica</h3>
+              <p>
+                Cambio de pasta térmica de alto rendimiento en el procesador y
+                GPU para reducir la temperatura y mejorar la velocidad.
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="detalle-servicio" aria-labelledby="detalle-mantenimiento">
+          <div class="detalle-introduccion">
+            <p class="etiqueta-seccion">Cuidado para tus equipos</p>
+            <h2 id="detalle-mantenimiento">¿Qué incluye el mantenimiento?</h2>
+            <p>Revisamos el estado físico y operativo del equipo para detectar problemas antes de que afecten su funcionamiento.</p>
+          </div>
+          <div class="detalle-grid">
+            <article>
+              <h3>Revisión inicial</h3>
+              <p>Verificamos temperaturas, ruidos, rendimiento, estado de componentes y señales de desgaste.</p>
+            </article>
+            <article>
+              <h3>Intervención técnica</h3>
+              <p>Realizamos limpieza, ajustes, cambio de materiales térmicos o reemplazo de piezas según la necesidad.</p>
+            </article>
+            <article>
+              <h3>Resultado esperado</h3>
+              <p>Un equipo más limpio, estable y preparado para continuar trabajando de forma eficiente.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <button id="theme-toggle" class="btn-tema" type="button">
+      <span id="theme-icon">☀️</span>
+    </button>
+
+    <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
+  </body>
+</html>

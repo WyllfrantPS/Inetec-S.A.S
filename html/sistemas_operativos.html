@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistemas Operativos | Inetec S.A.S.</title>
+    <meta
+      name="description"
+      content="Instalación, optimización, seguridad y recuperación de datos en sistemas Windows y Linux."
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-izquierdo">
+        <div class="logo-texto-wrapper">
+          <img
+            src="../img/adobe express - file (5).png"
+            alt="Logo"
+            class="logo-nav-pequeno"
+          />
+          <span class="nombre-empresa">Inetec S.A.S.</span>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      </button>
+      <div class="nav-derecho">
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a href="mantenimiento.html">Mantenimiento</a>
+              <a href="redes.html">Redes e Infraestructura</a>
+              <a href="sistemas_operativos.html">Sistemas Operativos</a>
+              <a href="sites.html">Sites</a>
+              <a href="desarrollo_web.html">Desarrollo Web</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a
+                href="https://www.tiktok.com/@inetec.s.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TikTok</a
+              >
+              <a
+                href="https://www.instagram.com/inetec.s.a.s/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              <a
+                href="https://www.youtube.com/@inetecs.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero">
+        <img
+          src="../img/adobe express - file (5).png"
+          alt="Logo Inetec"
+          class="logo-hero"
+        />
+        <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+        <div class="contenedor-resumen">
+          <p class="resumen-texto">
+            Transformamos su entorno de software en una plataforma de trabajo
+            ágil, estable y segura. Realizamos despliegues profesionales de
+            sistemas Windows y Linux, configurando cada parámetro para obtener
+            el mejor rendimiento del hardware disponible. Nuestro servicio
+            incluye el blindaje contra amenazas cibernéticas, la actualización
+            crítica de controladores y la limpieza profunda de registros para
+            erradicar errores y optimizar los tiempos de respuesta.
+          </p>
+        </div>
+        <h1 class="titulo-seccion">Nuestros Servicios</h1>
+        <div class="contenedor-piramide">
+          <div class="fila-inferior">
+            <div class="tarjeta">
+              <h3>Instalación de Sistemas</h3>
+              <p>
+                Instalación limpia de Windows 10, 11 o distribuciones Linux,
+                garantizando que todos los controladores (drivers) queden
+                actualizados.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Desinfección de Software</h3>
+              <p>
+                Eliminación profesional de virus, malware y troyanos sin perder
+                tus archivos importantes. Instalación de seguridad avanzada.
+              </p>
+            </div>
+            <div class="tarjeta">
+              <h3>Recuperación de Datos</h3>
+              <p>
+                Respaldo de información y recuperación de archivos perdidos en
+                discos duros con errores lógicos o formateos accidentales.
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="detalle-servicio" aria-labelledby="detalle-sistemas">
+          <div class="detalle-introduccion">
+            <p class="etiqueta-seccion">Software estable y seguro</p>
+            <h2 id="detalle-sistemas">¿Cómo mejoramos tu sistema?</h2>
+            <p>Preparamos el equipo para que puedas trabajar con un sistema actualizado, protegido y adecuado para tus tareas.</p>
+          </div>
+          <div class="detalle-grid">
+            <article>
+              <h3>Preparación</h3>
+              <p>Revisamos el equipo, respaldamos la información disponible y definimos la intervención necesaria.</p>
+            </article>
+            <article>
+              <h3>Instalación y ajustes</h3>
+              <p>Instalamos el sistema, controladores y configuraciones básicas para obtener un funcionamiento estable.</p>
+            </article>
+            <article>
+              <h3>Protección</h3>
+              <p>Aplicamos actualizaciones, revisiones de seguridad y recomendaciones para cuidar tus archivos.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <button id="theme-toggle" class="btn-tema" type="button">
+      <span id="theme-icon">☀️</span>
+    </button>
+    <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
+  </body>
+</html>

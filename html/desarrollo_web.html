@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desarrollo Web | Inetec S.A.S.</title>
+    <meta
+      name="description"
+      content="Desarrollo de sitios web modernos, adaptables y orientados a la experiencia del usuario."
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-izquierdo">
+        <div class="logo-texto-wrapper">
+          <img
+            src="../img/adobe express - file (5).png"
+            alt="Logo"
+            class="logo-nav-pequeno"
+          />
+          <span class="nombre-empresa">Inetec S.A.S.</span>
+        </div>
+      </div>
+      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      </button>
+      <div class="nav-derecho">
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a href="mantenimiento.html">Mantenimiento</a>
+              <a href="redes.html">Redes e Infraestructura</a>
+              <a href="sistemas_operativos.html">Sistemas Operativos</a>
+              <a href="sites.html">Sites</a>
+              <a href="desarrollo_web.html">Desarrollo Web</a>
+            </div>
+          </li>
+
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
+            <div class="dropdown-content">
+              <a
+                href="https://www.tiktok.com/@inetec.s.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >TikTok</a
+              >
+              <a
+                href="https://www.instagram.com/inetec.s.a.s/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              <a
+                href="https://www.youtube.com/@inetecs.a.s"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="inicio">
+      <section class="hero">
+        <img
+          src="../img/adobe express - file (5).png"
+          alt="Logo Inetec"
+          class="logo-hero"
+        />
+        <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+        <div class="contenedor-resumen">
+          <p class="resumen-texto">
+            Construimos su presencia en la red mediante el desarrollo de
+            ecosistemas web modernos que combinan una estética vanguardista con
+            una funcionalidad impecable. Nos enfocamos en crear interfaces
+            intuitivas y adaptables (Responsive Design) que aseguran una
+            experiencia de usuario superior en cualquier dispositivo. En Inetec
+            S.A.S., convertimos su visión en una herramienta digital potente que
+            proyecta confianza y profesionalismo hacia sus clientes.
+          </p>
+        </div>
+
+        <h1 class="titulo-seccion">Nuestros Servicios</h1>
+
+        <div class="contenedor-piramide">
+          <div class="fila-superior">
+            <a href="mantenimiento.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Mantenimiento</h3>
+                <p>Hardware y Software</p>
+              </div>
+            </a>
+            <a href="redes.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Redes</h3>
+                <p>Infraestructura y TCP/IP</p>
+              </div>
+            </a>
+          </div>
+          <div class="fila-inferior">
+            <a href="sistemas_operativos.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Sistemas</h3>
+                <p>Optimización total</p>
+              </div>
+            </a>
+            <a href="sites.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Sites</h3>
+                <p>Gestión de espacios</p>
+              </div>
+            </a>
+            <a href="desarrollo_web.html" class="tarjeta-link">
+              <div class="tarjeta">
+                <h3>Web</h3>
+                <p>Desarrollo Profesional</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <section class="detalle-servicio" aria-labelledby="detalle-web">
+          <div class="detalle-introduccion">
+            <p class="etiqueta-seccion">De la idea al sitio</p>
+            <h2 id="detalle-web">¿Qué incluye un desarrollo web?</h2>
+            <p>Convertimos tus objetivos en una experiencia digital clara, adaptable y alineada con la identidad de tu proyecto.</p>
+          </div>
+          <div class="detalle-grid">
+            <article>
+              <h3>Planeación</h3>
+              <p>Definimos el propósito del sitio, su contenido, estructura y las necesidades de las personas que lo visitarán.</p>
+            </article>
+            <article>
+              <h3>Diseño responsive</h3>
+              <p>Construimos interfaces que se adaptan a celulares, tabletas y computadores sin perder claridad.</p>
+            </article>
+            <article>
+              <h3>Pruebas y entrega</h3>
+              <p>Revisamos navegación, visualización y funcionamiento general antes de dejar el sitio listo para publicar.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <button id="theme-toggle" class="btn-tema" type="button">
+      <span id="theme-icon">☀️</span>
+    </button>
+    <script src="../js/tema.js"></script>
+    <script src="../js/navegacion.js"></script>
+  </body>
+</html>
