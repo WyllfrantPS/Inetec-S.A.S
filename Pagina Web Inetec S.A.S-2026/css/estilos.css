@@ -503,6 +503,178 @@ nav {
     drop-shadow(0 0 30px rgba(0, 123, 255, 0.4));
 }
 
+.logo-hero[role="button"] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-hero[role="button"]:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 6px;
+}
+
+.dino-dialog {
+  width: min(820px, calc(100vw - 28px));
+  max-width: none;
+  max-height: calc(100vh - 28px);
+  padding: 0;
+  overflow: auto;
+  color: #26332a;
+  background: #f7f9f2;
+  border: 1px solid #aebca9;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.dino-dialog::backdrop {
+  background: rgba(5, 11, 8, 0.82);
+  backdrop-filter: blur(5px);
+}
+
+.dino-game {
+  padding: clamp(18px, 4vw, 32px);
+  font-family: "Montserrat", sans-serif;
+}
+
+.dino-header,
+.dino-scoreboard,
+.dino-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.dino-header {
+  margin-bottom: 20px;
+}
+
+.dino-eyebrow {
+  margin: 0 0 5px;
+  color: #47734f;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.dino-header h2 {
+  margin: 0;
+  font-size: clamp(1.15rem, 4vw, 1.7rem);
+  line-height: 1.2;
+}
+
+.dino-close,
+.dino-jump,
+.dino-restart {
+  min-height: 44px;
+  border: 1px solid #526b55;
+  border-radius: 5px;
+  color: #203526;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dino-close {
+  width: 44px;
+  flex: 0 0 44px;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.dino-scoreboard {
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  color: #4d624e;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.dino-scoreboard output {
+  display: inline-block;
+  min-width: 5ch;
+  margin-left: 5px;
+  color: #203526;
+  text-align: right;
+}
+
+#dino-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 5;
+  border: 1px solid #bdc9b7;
+  background: #edf2e8;
+  image-rendering: pixelated;
+  touch-action: manipulation;
+}
+
+.dino-status {
+  min-height: 1.5em;
+  margin: 12px 0 16px;
+  color: #526353;
+  font-size: 0.9rem;
+}
+
+.dino-controls {
+  justify-content: flex-start;
+}
+
+.dino-jump {
+  min-width: 132px;
+  padding: 0 24px;
+  color: #f8faf5;
+  background: #315c3e;
+  border-color: #315c3e;
+}
+
+.dino-restart {
+  padding: 0 18px;
+}
+
+.dino-close:hover,
+.dino-restart:hover {
+  background: #e5ecdf;
+}
+
+.dino-jump:hover {
+  background: #24482f;
+}
+
+.dino-close:focus-visible,
+.dino-jump:focus-visible,
+.dino-restart:focus-visible,
+#dino-canvas:focus-visible {
+  outline: 3px solid #78a66f;
+  outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+  .dino-game {
+    padding: 18px;
+  }
+
+  .dino-scoreboard {
+    font-size: 0.72rem;
+  }
+
+  #dino-canvas {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dino-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dino-jump,
+  .dino-restart {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
 /* Estilo inicial de la frase/slogan */
 .slogan-empresa {
   font-size: 1.1rem;

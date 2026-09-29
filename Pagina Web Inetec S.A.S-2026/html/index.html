@@ -88,6 +88,11 @@
           src="../img/adobe express - file (5).png"
           alt="Logo Inetec"
           class="logo-hero"
+          id="logo-inicio-juego"
+          role="button"
+          tabindex="0"
+          aria-label="Abrir el juego del dinosaurio con tres clics"
+          title="Haz tres clics para abrir un juego"
         />
         <p class="etiqueta-hero">Tecnología que impulsa tus ideas</p>
         <h1 class="titulo-hero">
@@ -212,7 +217,32 @@
       <span id="theme-icon">☀️</span>
     </button>
 
+    <dialog class="dino-dialog" id="dino-dialog" aria-labelledby="dino-title">
+      <div class="dino-game">
+        <header class="dino-header">
+          <div>
+            <p class="dino-eyebrow">INETEC ARCADE</p>
+            <h2 id="dino-title">Dinosaurio sin internet</h2>
+          </div>
+          <button class="dino-close" id="dino-close" type="button" aria-label="Cerrar juego" title="Cerrar juego">×</button>
+        </header>
+        <div class="dino-scoreboard">
+          <span>PUNTOS <output id="dino-score">00000</output></span>
+          <span>RÉCORD <output id="dino-best">00000</output></span>
+        </div>
+        <canvas id="dino-canvas" width="800" height="250" aria-label="Juego del dinosaurio: salta los cactus" tabindex="0">
+          Tu navegador no puede mostrar el juego.
+        </canvas>
+        <p class="dino-status" id="dino-status" aria-live="polite">Salta los cactus para sumar puntos.</p>
+        <footer class="dino-controls">
+          <button class="dino-jump" id="dino-jump" type="button">Saltar</button>
+          <button class="dino-restart" id="dino-restart" type="button">Reiniciar</button>
+        </footer>
+      </div>
+    </dialog>
+
     <script src="../js/tema.js"></script>
     <script src="../js/navegacion.js"></script>
+    <script src="../js/juego_dinosaurio.js"></script>
   </body>
 </html>
