@@ -26,8 +26,14 @@
           <span class="nombre-empresa">Inetec S.A.S.</span>
         </div>
       </div>
-      <button class="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
-        <span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menú</span>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+      >
+        <span class="menu-toggle-icon" aria-hidden="true">☰</span
+        ><span>Menú</span>
       </button>
       <div class="nav-derecho">
         <ul class="menu" id="menu-principal">
@@ -35,7 +41,9 @@
           <li><a href="empresa.html">Empresa</a></li>
 
           <li class="dropdown">
-            <button class="dropbtn" type="button" aria-expanded="false">Servicios <span aria-hidden="true">▼</span></button>
+            <button class="dropbtn" type="button" aria-expanded="false">
+              Servicios <span aria-hidden="true">▼</span>
+            </button>
             <div class="dropdown-content">
               <a href="mantenimiento.html">Mantenimiento</a>
               <a href="redes.html">Redes e Infraestructura</a>
@@ -46,32 +54,14 @@
           </li>
 
           <li class="dropdown">
-            <button class="dropbtn" type="button" aria-expanded="false">Redes Sociales <span aria-hidden="true">▼</span></button>
-            <div class="dropdown-content">
-              <a
-                href="https://www.tiktok.com/@inetec.s.a.s"
-                target="_blank"
-                rel="noopener noreferrer"
-                >TikTok</a
-              >
-              <a
-                href="https://www.instagram.com/inetec.s.a.s/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instagram</a
-              >
-              <a
-                href="https://www.youtube.com/@inetecs.a.s"
-                target="_blank"
-                rel="noopener noreferrer"
-                >YouTube</a
-              >
-            </div>
+            <button class="dropbtn" type="button" aria-expanded="false">
+              Redes Sociales <span aria-hidden="true">▼</span>
+            </button>
+            <div class="dropdown-content" data-redes-sociales></div>
           </li>
         </ul>
       </div>
     </nav>
-
     <main id="inicio">
       <section class="hero">
         <img
@@ -80,6 +70,7 @@
           class="logo-hero"
         />
         <p class="slogan-empresa">Tu Aliado En La Era Digital</p>
+        <h1 class="titulo-seccion">Mantenimiento</h1>
         <div class="contenedor-resumen">
           <p class="resumen-texto">
             Nos especializamos en la gestión integral del ciclo de vida de su
@@ -92,8 +83,6 @@
             durabilidad.
           </p>
         </div>
-        <h1 class="titulo-seccion">Nuestros Servicios</h1>
-
         <div class="contenedor-piramide">
           <div class="fila-inferior">
             <div class="tarjeta">
@@ -121,24 +110,39 @@
             </div>
           </div>
         </div>
-        <section class="detalle-servicio" aria-labelledby="detalle-mantenimiento">
+        <section
+          class="detalle-servicio"
+          aria-labelledby="detalle-mantenimiento"
+        >
           <div class="detalle-introduccion">
             <p class="etiqueta-seccion">Cuidado para tus equipos</p>
             <h2 id="detalle-mantenimiento">¿Qué incluye el mantenimiento?</h2>
-            <p>Revisamos el estado físico y operativo del equipo para detectar problemas antes de que afecten su funcionamiento.</p>
+            <p>
+              Revisamos el estado físico y operativo del equipo para detectar
+              problemas antes de que afecten su funcionamiento.
+            </p>
           </div>
           <div class="detalle-grid">
             <article>
               <h3>Revisión inicial</h3>
-              <p>Verificamos temperaturas, ruidos, rendimiento, estado de componentes y señales de desgaste.</p>
+              <p>
+                Verificamos temperaturas, ruidos, rendimiento, estado de
+                componentes y señales de desgaste.
+              </p>
             </article>
             <article>
               <h3>Intervención técnica</h3>
-              <p>Realizamos limpieza, ajustes, cambio de materiales térmicos o reemplazo de piezas según la necesidad.</p>
+              <p>
+                Realizamos limpieza, ajustes, cambio de materiales térmicos o
+                reemplazo de piezas según la necesidad.
+              </p>
             </article>
             <article>
               <h3>Resultado esperado</h3>
-              <p>Un equipo más limpio, estable y preparado para continuar trabajando de forma eficiente.</p>
+              <p>
+                Un equipo más limpio, estable y preparado para continuar
+                trabajando de forma eficiente.
+              </p>
             </article>
           </div>
         </section>
@@ -150,6 +154,7 @@
     </button>
 
     <script src="../js/tema.js"></script>
+    <script src="../js/redes-sociales.js"></script>
     <script src="../js/navegacion.js"></script>
   </body>
 </html>

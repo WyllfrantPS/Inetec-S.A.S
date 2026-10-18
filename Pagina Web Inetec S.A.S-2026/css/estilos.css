@@ -88,6 +88,7 @@ nav {
 
 .menu a,
 .dropbtn {
+  font-family: inherit;
   text-decoration: none;
   color: var(--texto-nav);
   font-weight: 700;
@@ -809,7 +810,7 @@ nav {
 }
 
 .contenedor-empresa {
-  max-width: 600px; /* Evita que el texto se riegue */
+  max-width: 980px; /* Ajusta el ancho para ubicar el bloque principal y las dos columnas laterales */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -830,28 +831,35 @@ nav {
 .empresa-informacion {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  width: min(100%, 900px);
+  gap: 18px;
+  width: min(100%, 980px);
   margin-top: 42px;
   text-align: left;
+  align-items: stretch;
 }
 
 .empresa-bloque {
   padding: 26px;
   border: 1px solid var(--borde);
   border-top: 3px solid var(--acento);
-  background: var(--bg-tarjeta);
+  background: rgba(13, 34, 52, 0.75);
+  box-shadow: 0 0 0 1px rgba(104, 216, 208, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 260px;
 }
 
-.empresa-bloque-ancho {
+.empresa-bloque-grande {
   grid-column: 1 / -1;
+  min-height: 220px;
 }
 
 .empresa-bloque h2 {
   margin: 0 0 12px;
   color: var(--texto-principal);
-  font-size: 1.35rem;
-  line-height: 1.25;
+  font-size: clamp(1.5rem, 2vw, 2.4rem);
+  line-height: 1.2;
 }
 
 .empresa-bloque > p:last-child {
@@ -862,6 +870,11 @@ nav {
 
 .empresa-bloque .etiqueta-seccion {
   margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--acento);
 }
 
 .pasos-empresa {
