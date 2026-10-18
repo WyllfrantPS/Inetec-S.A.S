@@ -19,6 +19,18 @@ function alternarContenido(boton, contenido) {
       return;
     }
 
+    const permitirCrecimiento = (evento) => {
+      if (evento.target !== contenido || evento.propertyName !== "max-height") {
+        return;
+      }
+
+      contenido.removeEventListener("transitionend", permitirCrecimiento);
+      if (contenido.classList.contains("esta-abierto")) {
+        contenido.style.maxHeight = "none";
+      }
+    };
+
+    contenido.addEventListener("transitionend", permitirCrecimiento);
     requestAnimationFrame(() => {
       contenido.classList.add("esta-abierto");
       contenido.style.maxHeight = `${contenido.scrollHeight}px`;
@@ -38,7 +50,7 @@ function alternarContenido(boton, contenido) {
   contenido.classList.remove("esta-abierto");
 
   const finalizarCierre = (evento) => {
-    if (evento.propertyName !== "max-height") {
+    if (evento.target !== contenido || evento.propertyName !== "max-height") {
       return;
     }
 
